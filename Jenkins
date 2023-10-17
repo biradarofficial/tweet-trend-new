@@ -12,7 +12,7 @@ pipeline {
         stage('Shyam saheb 1') {
             steps {
                 // Get some code from a GitHub repository
-                git 'https://github.com/ravdy/tweet-trend-new.git'
+                git 'https://github.com/biradarofficial/tweet-trend-new.git'
 
                 // Run Maven on a Unix agent.
                 sh "mvn -Dmaven.test.failure.ignore=true clean package"
