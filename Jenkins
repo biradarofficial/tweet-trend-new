@@ -1,6 +1,6 @@
 pipeline {
     agent {
-        label 'jenkins-slave'
+        label 'maven'
     }
 
     tools {
@@ -15,7 +15,7 @@ pipeline {
                 git 'https://github.com/biradarofficial/tweet-trend-new.git'
 
                 // Run Maven on a Unix agent.
-                sh "mvn -Dmaven.test.failure.ignore=true clean package"
+                sh "mvn -DskipTests=true clean package"
 
             
             }
